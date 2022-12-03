@@ -18,7 +18,7 @@ module.exports = {
           });
     },
 
-    getSingleUser(req, req) {
+    getSingleUser(req, res) {
         User.findOne({_id: req.params.userId })
         .select('-__v')
         .then(async (user) => 
