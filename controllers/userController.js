@@ -5,12 +5,12 @@ const { User, Thought } = require('../models');
 
 module.exports = {
     getUsers(req, res) {
-        User.findOne()
+        User.find()
         .then(async (users) => {
             const userObj = {
                 users,
             };
-            return res.json(studentObj);
+            return res.json(userObj);
         })
         .catch((err) => {
             console.log(err);
